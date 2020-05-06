@@ -1,0 +1,37 @@
+[
+  {
+    "client_vault_client_id": 2,
+    "client_vault_id"       : 3,
+    "client_vault_password" : "cm",
+    "client_vault_tag"      : "Accounts",
+    "client_vault_vault_id" : 6
+  },
+  {
+    "client_vault_client_id": 3,
+    "client_vault_id"       : 4,
+    "client_vault_password" : "ff",
+    "client_vault_tag"      : "Private Papers",
+    "client_vault_vault_id" : 4
+  },
+  {
+    "client_vault_client_id": 3,
+    "client_vault_id"       : 5,
+    "client_vault_password" : "ff",
+    "client_vault_tag"      : "Contracts",
+    "client_vault_vault_id" : 5
+  },
+  {
+    "client_vault_client_id": 4,
+    "client_vault_id"       : 6,
+    "client_vault_password" : "gg",
+    "client_vault_tag"      : "Oxford",
+    "client_vault_vault_id" : 7
+  },
+  {
+    "client_vault_client_id": 4,
+    "client_vault_id"       : 8,
+    "client_vault_password" : "gg",
+    "client_vault_tag"      : "Birmingham",
+    "client_vault_vault_id" : 8
+  }
+]

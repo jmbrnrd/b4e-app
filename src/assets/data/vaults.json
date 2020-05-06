@@ -1,0 +1,82 @@
+[
+  {
+    "vault_IP_address"      : "20.1.1.1",
+    "vault_assigned_date"   : "02/04/2018",
+    "vault_id"              : 1,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P2785/207Y",
+    "vault_physical_address": "Rack 1, Slot 1",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "20.1.1.2",
+    "vault_assigned_date"   : "02/04/2018",
+    "vault_id"              : 2,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P2785/213H",
+    "vault_physical_address": "Rack 1, Slot 2",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "20.1.1.3",
+    "vault_assigned_date"   : "02/04/2018",
+    "vault_id"              : 3,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P2785/382G",
+    "vault_physical_address": "Rack 1, Slot 3",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "5000",
+    "vault_assigned_date"   : "02/04/2018",
+    "vault_id"              : 4,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P4382/921J",
+    "vault_physical_address": "Rack 1, Slot 4",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "5001",
+    "vault_assigned_date"   : "02/04/2018",
+    "vault_id"              : 5,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P4382/677S",
+    "vault_physical_address": "Rack 2, Slot 1",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "5002",
+    "vault_assigned_date"   : "01/01/1900",
+    "vault_id"              : 6,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P4382/185D",
+    "vault_physical_address": "Rack 2, Slot 2",
+    "vault_status"          : "Active",
+    "vault_type"            : "Private"
+  },
+  {
+    "vault_IP_address"      : "5003",
+    "vault_assigned_date"   : "01/01/1900",
+    "vault_id"              : 7,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P5297/150K",
+    "vault_physical_address": "Rack 2, Slot 3",
+    "vault_status"          : "Active",
+    "vault_type"            : "Corporate"
+  },
+  {
+    "vault_IP_address"      : "5004",
+    "vault_assigned_date"   : "01/01/1900",
+    "vault_id"              : 8,
+    "vault_installed_date"  : "01/04/2018",
+    "vault_name"            : "P5297/737V",
+    "vault_physical_address": "Rack 2, Slot 4",
+    "vault_status"          : "Active",
+    "vault_type"            : "Corporate"
+  }
+]

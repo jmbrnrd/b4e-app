@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'b4e-app';
-  cols: number;
-  rows: number;
-  text: string;
-  border: string;
-  tiles: any = [
-    {text: 'Tile 1', cols: 2, rows: 1 , border: 'solid 3px purple'},
-    {text: 'Tile 2', cols: 2, rows: 1 , border: 'solid 3px red'},
-    {text: 'Tile 3', cols: 2, rows: 1 , border: 'solid 3px skyblue'},
-    {text: 'Tile 4', cols: 2, rows: 1 , border: 'solid 3px yellow'},
-  ];
+
+  constructor( private apiService: ApiService) {
+    this.apiService.getClients().subscribe(
+      (res) => {
+        console.log('Clients', res);
+      }
+    );
+    this.apiService.getClientVaults().subscribe(
+      (res) => {
+        console.log('Client Vaults', res);
+      }
+    );
+    this.apiService.getVaults().subscribe(
+      (res) => {
+        console.log('Vaults', res);
+      }
+    );
+  }
 }

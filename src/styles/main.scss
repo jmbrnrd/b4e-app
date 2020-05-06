@@ -1,0 +1,49 @@
+//$mdc-layout-grid-default-gutter: ( desktop: 16px, tablet: 16px, phone: 8px);
+//$mdc-layout-grid-default-margin: ( desktop: 16px, tablet: 16px, phone: 8px);
+//@import "@material/layout-grid/mdc-layout-grid";
+
+// Variables
+$clr-green:   #CCF437;
+$clr-red:     #F44B49;
+
+html, body {
+  height: 100vh;
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-image: url("../assets/images/vault-bgd.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+// Branding
+.brand-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .brand {
+    margin-top: -20vh;
+    width: 62vw;
+    max-width: 400px;
+    img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+    p {
+      text-align: center;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      color: $clr-green;
+      margin-top: 0;
+    }
+  }
+}

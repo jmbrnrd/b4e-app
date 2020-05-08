@@ -17,10 +17,10 @@
 
   <p>Please enter your B4E username and password below.</p>
   <p>Once this has verified you will be asked to complete the authentication process by using the fingerprint scanner.</p>
-  <form class="frm-login" autocomplete="off" routerLink="verify" >
+  <form class="frm-login" autocomplete="off" action="verify" method="get">
     <div class="frm-field">
       <label for="user">USERNAME</label>
-      <input id="user" matInput name="uname" placeholder="Enter you username/email">
+      <input id="user" matInput name="user" placeholder="Enter you username/email">
     </div>
     <div class="frm-field">
       <label for="pwd">PASSWORD</label>

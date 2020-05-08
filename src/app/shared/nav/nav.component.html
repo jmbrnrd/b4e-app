@@ -1,0 +1,29 @@
+<div class="nav-container">
+
+  <div class="nav-bar">
+    <a (click)="navTo('settings')">
+      <img src="assets/images/icon-settings.svg" alt="Vault Settings">
+    </a>
+    <a (click)="navTo('settings')">
+      <img src="assets/images/icon-vaults.svg" alt="Vault Settings">
+    </a>
+    <a (click)="navTo('settings')">
+      <img src="assets/images/icon-settings.svg" alt="Vault Settings">
+    </a>
+    <a (click)="navTo('user')">
+      <img src="assets/images/icon-user.svg" alt="User Profile">
+    </a>
+    <a (click)="navMore()">
+      <img src="assets/images/icon-more.svg" alt="More navigation options">
+    </a>
+  </div>
+
+  <div class="nav-more" [class.open]="navOpen">
+    <a (click)="navTo('logou')">LOGOUT</a>
+    <a (click)="navTo('contact')">CONTACT B4E</a>
+    <a (click)="navTo('help')">HELP</a>
+    <a (click)="navTo('bug')">REPORT A BUG</a>
+  </div>
+
+</div>
+

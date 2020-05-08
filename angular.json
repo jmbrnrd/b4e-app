@@ -25,7 +25,6 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles/b4e-theme.scss",
               "src/styles/main.scss"
             ],
             "scripts": []

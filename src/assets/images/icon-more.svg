@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="8px" viewBox="0 0 35 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-344.000000, -835.000000)">
+            <g id="icon_ios_more_filled" transform="translate(340.000000, 819.000000)">
+                <g id="Group-2">
+                    <rect id="@bounds" x="2" y="0" width="40" height="40"></rect>
+                    <path d="M8,24 L8,24 C5.790861,24 4,22.209139 4,20 C4,17.790861 5.790861,16 8,16 C10.209139,16 12,17.790861 12,20 C12,22.209139 10.209139,24 8,24 L8,24 Z M21,24 L21,24 C18.790861,24 17,22.209139 17,20 C17,17.790861 18.790861,16 21,16 C23.209139,16 25,17.790861 25,20 C25,22.209139 23.209139,24 21,24 L21,24 Z M35,24 L35,24 C32.790861,24 31,22.209139 31,20 C31,17.790861 32.790861,16 35,16 C37.209139,16 39,17.790861 39,20 C39,22.209139 37.209139,24 35,24 L35,24 Z" id="Shape" fill="#D6F65D" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

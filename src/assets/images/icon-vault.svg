@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="23px" viewBox="0 0 38 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ios_drawer</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-assets" transform="translate(-189.000000, -543.000000)">
+            <g id="icon_ios_drawer" transform="translate(188.000000, 536.000000)">
+                <rect id="@bounds" x="0" y="0" width="40" height="40"></rect>
+                <path d="M1,16 L39,16 L39,30 L1,30 L1,16 Z M2.72727273,17.75 L2.72727273,28.25 L37.2727273,28.25 L37.2727273,17.75 L2.72727273,17.75 Z" id="Rectangle-171" fill="#D6F65D"></path>
+                <path d="M12,16 L13.75,16 C13.75,18.8994949 16.1005051,21.25 19,21.25 C21.8994949,21.25 24.25,18.8994949 24.25,16 L26,16 C26,19.8659932 22.8659932,23 19,23 C15.1340068,23 12,19.8659932 12,16 Z" id="Oval-29" fill="#D6F65D"></path>
+                <path d="M36.4090909,17 L30.3636364,8.81818182 L9.63636364,8.81818182 L3.59090909,17 L1,17 L8.77272727,7 L31.2272727,7 L39,17 L36.4090909,17 Z" id="Rectangle-171" fill="#D6F65D"></path>
+            </g>
+        </g>
+    </g>
+</svg>

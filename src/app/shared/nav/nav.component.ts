@@ -27,5 +27,4 @@ export class NavComponent implements OnInit {
   navMore() {
     this.navOpen = !this.navOpen;
   }
-
 }

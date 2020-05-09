@@ -15,11 +15,25 @@
     </div>
     <div class="screen-title"><h1>Private vaults</h1></div>
   </div>
-</div>
-<div class="vault-list">
-  <div class="vault">
-
+  <p>Welcome back Mr Flinstone, you currently have 2 private vaults available to you.</p>
+  <div class="vault-list">
+    <div class="vault" *ngFor="let vault of privateVaults">
+      <div class="vault-title-bar">
+        <img src="assets/images/icon-vault.svg">
+        <h2>{{ vault.client_vault_tag | uppercase }}</h2>
+      </div>
+      <div class="vault-body">
+        <span>{{ vault.client_vault_vault_id }}</span>
+      </div>
+    </div>
   </div>
 </div>
+
+client_vault_client_id: 3
+client_vault_id: 4
+client_vault_password: "ff"
+client_vault_tag: "Private Papers"
+client_vault_vault_id: 4
+
 <app-nav [class.nav-default]="!isLoading"></app-nav>
 <app-load [class.show]="isLoading" [loadMessage]="loadMessage"></app-load>

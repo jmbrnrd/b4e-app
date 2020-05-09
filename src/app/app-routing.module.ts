@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'verify', component: VerifyComponent },
   { path: 'vaults', component: VaultsComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

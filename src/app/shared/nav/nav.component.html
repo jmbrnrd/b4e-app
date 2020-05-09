@@ -1,16 +1,16 @@
 <div class="nav-container">
 
   <div class="nav-bar">
-    <a (click)="navTo('settings')">
+    <a (click)="nav('settings')">
       <img src="assets/images/icon-settings.svg" alt="Vault Settings">
     </a>
-    <a (click)="navTo('settings')">
+    <a (click)="nav('vaults')">
       <img src="assets/images/icon-vaults.svg" alt="Vault Settings">
     </a>
-    <a (click)="navTo('settings')">
-      <img src="assets/images/icon-settings.svg" alt="Vault Settings">
+    <a (click)="nav('user')">
+      <img src="assets/images/icon-add.svg" alt="Create new vault">
     </a>
-    <a (click)="navTo('user')">
+    <a (click)="nav('user')">
       <img src="assets/images/icon-user.svg" alt="User Profile">
     </a>
     <a (click)="navMore()">
@@ -19,10 +19,10 @@
   </div>
 
   <div class="nav-more" [class.open]="navOpen">
-    <a (click)="navTo('logou')">LOGOUT</a>
-    <a (click)="navTo('contact')">CONTACT B4E</a>
-    <a (click)="navTo('help')">HELP</a>
-    <a (click)="navTo('bug')">REPORT A BUG</a>
+    <a (click)="nav('logout')">LOGOUT</a>
+    <a (click)="nav('contact')">CONTACT B4E</a>
+    <a (click)="nav('help')">HELP</a>
+    <a (click)="nav('bug')">REPORT A BUG</a>
   </div>
 
 </div>

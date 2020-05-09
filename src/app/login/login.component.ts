@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   isLoading = true;
-  loadMessage = 'Accessing account login...';
+  loadMessage = 'Establishing secure connection';
   constructor() { }
 
   ngOnInit(): void {

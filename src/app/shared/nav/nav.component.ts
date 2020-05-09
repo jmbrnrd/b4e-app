@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -6,16 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   navOpen = false;
-  constructor() { }
+  constructor(private router: Router ) { }
 
   ngOnInit(): void {
   }
-  navTo(tgt) {
+  nav(tgt) {
     console.log(tgt);
+    switch (tgt) {
+      case 'more': {
+        this.router.navigate([]);
+        break;
+      }
+      default: {
+        this.router.navigate([tgt]);
+        break;
+      }
+    }
   }
   navMore() {
     this.navOpen = !this.navOpen;
-    console.log('navMore open = ' + this.navOpen);
   }
 
 }

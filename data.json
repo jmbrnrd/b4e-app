@@ -1,0 +1,187 @@
+{
+  "clients" : [
+    {
+      "client_corporate_id"     : 0,
+      "client_forename"         : "Robert",
+      "client_id"               : 1,
+      "client_initials"         : "RJ",
+      "client_password"         : "ro",
+      "client_recovery"         : "etfA",
+      "client_reference_number" : "US00001",
+      "client_registration_date": "03/04/2018",
+      "client_status"           : "Active",
+      "client_surname"          : "Ortiz",
+      "client_title"            : "Mr.",
+      "client_type"             : "Private",
+      "client_user_name"        : "ro",
+      "client_verified_date"    : "03/04/2018"
+    },
+    {
+      "client_corporate_id"     : 0,
+      "client_forename"         : "Craig",
+      "client_id"               : 2,
+      "client_initials"         : "CW",
+      "client_password"         : "cm",
+      "client_recovery"         : "etfB",
+      "client_reference_number" : "US00002",
+      "client_registration_date": "01/04/2018",
+      "client_status"           : "Pending",
+      "client_surname"          : "Mabbitt",
+      "client_title"            : "Mr.",
+      "client_type"             : "Private",
+      "client_user_name"        : "cm",
+      "client_verified_date"    : "01/01/1900"
+    },
+    {
+      "client_corporate_id"     : 0,
+      "client_forename"         : "Fred",
+      "client_id"               : 3,
+      "client_initials"         : "FD",
+      "client_password"         : "ff",
+      "client_recovery"         : "bedrock",
+      "client_reference_number" : "UK00001",
+      "client_registration_date": "02/04/2018",
+      "client_status"           : "Suspended",
+      "client_surname"          : "Flintstone",
+      "client_title"            : "Prof.",
+      "client_type"             : "Private",
+      "client_user_name"        : "ff",
+      "client_verified_date"    : "02/04/2018"
+    },
+    {
+      "client_corporate_id"     : 1,
+      "client_forename"         : "Gail",
+      "client_id"               : 4,
+      "client_initials"         : "GV",
+      "client_password"         : "gg",
+      "client_recovery"         : "morgan",
+      "client_reference_number" : "UKC0001",
+      "client_registration_date": "02/04/2018",
+      "client_status"           : "Active",
+      "client_surname"          : "Gladstone",
+      "client_title"            : "Mrs.",
+      "client_type"             : "Corporate",
+      "client_user_name"        : "gg",
+      "client_verified_date"    : "02/04/2018"
+    }
+  ],
+  "client_vaults" : [
+    {
+      "client_vault_client_id": 2,
+      "client_vault_id"       : 3,
+      "client_vault_password" : "cm",
+      "client_vault_tag"      : "Accounts",
+      "client_vault_vault_id" : 6
+    },
+    {
+      "client_vault_client_id": 3,
+      "client_vault_id"       : 4,
+      "client_vault_password" : "ff",
+      "client_vault_tag"      : "Private Papers",
+      "client_vault_vault_id" : 4
+    },
+    {
+      "client_vault_client_id": 3,
+      "client_vault_id"       : 5,
+      "client_vault_password" : "ff",
+      "client_vault_tag"      : "Contracts",
+      "client_vault_vault_id" : 5
+    },
+    {
+      "client_vault_client_id": 4,
+      "client_vault_id"       : 6,
+      "client_vault_password" : "gg",
+      "client_vault_tag"      : "Oxford",
+      "client_vault_vault_id" : 7
+    },
+    {
+      "client_vault_client_id": 4,
+      "client_vault_id"       : 8,
+      "client_vault_password" : "gg",
+      "client_vault_tag"      : "Birmingham",
+      "client_vault_vault_id" : 8
+    }
+  ],
+  "vaults": [
+    {
+      "vault_IP_address"      : "20.1.1.1",
+      "vault_assigned_date"   : "02/04/2018",
+      "vault_id"              : 1,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P2785/207Y",
+      "vault_physical_address": "Rack 1, Slot 1",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "20.1.1.2",
+      "vault_assigned_date"   : "02/04/2018",
+      "vault_id"              : 2,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P2785/213H",
+      "vault_physical_address": "Rack 1, Slot 2",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "20.1.1.3",
+      "vault_assigned_date"   : "02/04/2018",
+      "vault_id"              : 3,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P2785/382G",
+      "vault_physical_address": "Rack 1, Slot 3",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "5000",
+      "vault_assigned_date"   : "02/04/2018",
+      "vault_id"              : 4,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P4382/921J",
+      "vault_physical_address": "Rack 1, Slot 4",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "5001",
+      "vault_assigned_date"   : "02/04/2018",
+      "vault_id"              : 5,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P4382/677S",
+      "vault_physical_address": "Rack 2, Slot 1",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "5002",
+      "vault_assigned_date"   : "01/01/1900",
+      "vault_id"              : 6,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P4382/185D",
+      "vault_physical_address": "Rack 2, Slot 2",
+      "vault_status"          : "Active",
+      "vault_type"            : "Private"
+    },
+    {
+      "vault_IP_address"      : "5003",
+      "vault_assigned_date"   : "01/01/1900",
+      "vault_id"              : 7,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P5297/150K",
+      "vault_physical_address": "Rack 2, Slot 3",
+      "vault_status"          : "Active",
+      "vault_type"            : "Corporate"
+    },
+    {
+      "vault_IP_address"      : "5004",
+      "vault_assigned_date"   : "01/01/1900",
+      "vault_id"              : 8,
+      "vault_installed_date"  : "01/04/2018",
+      "vault_name"            : "P5297/737V",
+      "vault_physical_address": "Rack 2, Slot 4",
+      "vault_status"          : "Active",
+      "vault_type"            : "Corporate"
+    }
+  ]
+}

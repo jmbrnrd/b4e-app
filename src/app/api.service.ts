@@ -41,22 +41,18 @@ export interface Client {
   providedIn: 'root'
 })
 export class ApiService {
-  api = {
-    clients: 'assets/data/clients.json',
-    clientVaults: 'assets/data/client_vaults.json',
-    vaults: 'assets/data/vaults.json'
-  };
+  api = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
-  getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>(this.api.clients);
+  getAllClients(): Observable<Client[]> {
+    return this.http.get<Client[]>(this.api + '/clients');
   }
 
-  getClientVaults(): Observable<ClientVaults[]> {
-    return this.http.get<ClientVaults[]>(this.api.clientVaults);
+  getAllClientVaults(): Observable<ClientVaults[]> {
+    return this.http.get<ClientVaults[]>(this.api + '/client_vaults');
   }
 
-  getVaults(): Observable<Vaults[]> {
-    return this.http.get<Vaults[]>(this.api.vaults);
+  getAllVaults(): Observable<Vaults[]> {
+    return this.http.get<Vaults[]>(this.api + '/vaults');
   }
 }

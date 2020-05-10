@@ -25,12 +25,11 @@ export class VaultsComponent implements OnInit {
 
   getVaults() {
     return new Promise((resolve, reject) => {
-      this.api.getClientVaults()
+      this.api.getAllClientVaults()
         .toPromise()
         .then((res: any) => {
             // Success
             this.privateVaults = [res[1], res[2]];
-
             resolve();
           },
           err => {

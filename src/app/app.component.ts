@@ -8,17 +8,17 @@ import { ApiService } from './api.service';
 export class AppComponent {
 
   constructor( private apiService: ApiService) {
-    this.apiService.getClients().subscribe(
+    this.apiService.getAllClients().subscribe(
       (res) => {
         console.log('Clients', res);
       }
     );
-    this.apiService.getClientVaults().subscribe(
+    this.apiService.getAllClientVaults().subscribe(
       (res) => {
         console.log('Client Vaults', res);
       }
     );
-    this.apiService.getVaults().subscribe(
+    this.apiService.getAllVaults().subscribe(
       (res) => {
         console.log('Vaults', res);
       }

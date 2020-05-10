@@ -23,7 +23,7 @@ export interface Vaults {
 export interface Client {
   client_corporate_id: number;
   client_forename: string;
-  client_id: number;
+  id: number;
   client_initials: string;
   client_password: string;
   client_recovery: string;
@@ -46,6 +46,10 @@ export class ApiService {
 
   getAllClients(): Observable<Client[]> {
     return this.http.get<Client[]>(this.api + '/clients');
+  }
+
+  getClient(username: string): Observable<Client[]> {
+    return this.http.get<Client[]>(this.api + '/clients?client_user_name=' + username);
   }
 
   getAllClientVaults(): Observable<ClientVaults[]> {

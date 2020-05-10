@@ -149,30 +149,45 @@ a.more {
 
 .frm-login {
   margin-top: 3rem;
-}
-.frm-field {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.6rem;
-  label {
-    font-size: 1.1rem;
-    color: $clr-green;
-    padding-left: 8px;
-  }
-  input {
-    margin-top: 4px;
-    border: 1px solid $clr-green;
-    padding: 14px 20px;
-    border-radius: 8px;
-    background-color: rgba($clr-dark-blue,.6);
-    color: white;
-    font-family: "Rubik", sans-serif;
-    &::placeholder {
-      color: #eee;
-      font-weight: 300;
+  .frm-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+    label {
+      font-size: 1.1rem;
+      color: $clr-green;
+      padding-left: 8px;
+    }
+
+    input {
+      margin-top: 4px;
+      border: 1px solid $clr-green;
+      padding: 14px 20px;
+      border-radius: 8px;
+      background-color: rgba($clr-dark-blue, .6);
+      color: white;
+      font-family: "Rubik", sans-serif;
+
+      &::placeholder {
+        color: #eee;
+        font-weight: 300;
+      }
     }
   }
-
+  &.error {
+    input {
+      border-color: $clr-red;
+      color: $clr-red;
+    }
+  }
+  .icon-error {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 50%; right: 8px;
+    margin-top: -8px;
+  }
 }
 button {
   margin-top: 3.6rem;

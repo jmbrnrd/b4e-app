@@ -17,14 +17,29 @@
 
   <p>Please enter your B4E username and password below.</p>
   <p>Once this has verified you will be asked to complete the authentication process by using the fingerprint scanner.</p>
-  <form class="frm-login" autocomplete="off" action="verify" method="get">
+  <form
+    #frmLogin="ngForm"
+    (ngSubmit)="frmLogin.form.valid && login(frmLogin.value)"
+    class="frm-login"
+    autocomplete="off"
+    [class.error]="loginError">
     <div class="frm-field">
       <label for="user">USERNAME</label>
-      <input id="user" matInput name="user" placeholder="Enter you username/email">
+      <input id="user" #user ngModel name="user" placeholder="Enter you username/email" required>
+      <a class="icon-error"
+         (click)="clearInputs(frmLogin)"
+         *ngIf="loginError">
+        <img src="assets/images/icon-invalid.svg" alt="Login error">
+      </a>
     </div>
     <div class="frm-field">
       <label for="pwd">PASSWORD</label>
-      <input id="pwd" type="password" matInput name="pwd" placeholder="Enter your B4E password" >
+      <input id="pwd" #pwd type="password" ngModel name="pwd" placeholder="Enter your B4E password" required>
+      <a class="icon-error"
+         (click)="clearInputs(frmLogin)"
+         *ngIf="loginError">
+        <img src="assets/images/icon-invalid.svg" alt="Login error">
+      </a>
     </div>
     <button>VERIFY</button>
   </form>

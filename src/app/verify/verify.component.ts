@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-verify',
@@ -11,8 +12,12 @@ export class VerifyComponent implements OnInit {
   @Input() loadMessage: string;
   scanStatusMsg = 'AWAITING FINGERPRINT SCAN';
   scanSuccess = false;
+  nextScreen: string;
 
-  constructor(private router: Router) { }
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.loadMessage = 'Authenticating login details...';
@@ -24,7 +29,12 @@ export class VerifyComponent implements OnInit {
     this.scanSuccess = true;
     this.scanStatusMsg = 'SUCCESSFUL SCAN';
     setTimeout(() => {
-      this.router.navigate(['vaults']);
+      if (this.auth.isLoggedIn()) {
+        this.nextScreen = 'vaults';
+      } else {
+        this.nextScreen = 'login';
+      }
+      this.router.navigate([this.nextScreen]);
     }, 1000);
   }
 

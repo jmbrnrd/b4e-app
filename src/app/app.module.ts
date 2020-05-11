@@ -16,6 +16,7 @@ import { VerifyComponent } from './verify/verify.component';
 import { VaultsComponent } from './vaults/vaults.component';
 import { LoadComponent } from './shared/load/load.component';
 import { FormsModule } from '@angular/forms';
+import { VaultComponent } from './vaults/vault.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     VerifyComponent,
     VaultsComponent,
-    LoadComponent
+    LoadComponent,
+    VaultComponent
   ],
   imports: [
     BrowserModule,

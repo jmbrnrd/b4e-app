@@ -17,6 +17,7 @@ export class AuthService {
   }
   logout(): void {
     this.currentClient = null;
+    console.log(`CurrentClient=${this.currentClient}`);
   }
   getCurrentClient() {
     return this.currentClient;

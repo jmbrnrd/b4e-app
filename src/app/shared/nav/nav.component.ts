@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,10 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   navOpen = false;
-  constructor(private router: Router ) { }
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -16,6 +20,11 @@ export class NavComponent implements OnInit {
     switch (tgt) {
       case 'more': {
         this.router.navigate([]);
+        break;
+      }
+      case 'logout': {
+        this.auth.logout();
+        this.router.navigate(['/']);
         break;
       }
       default: {

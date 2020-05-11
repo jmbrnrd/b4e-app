@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 
-
+// Models
 export interface ClientVaults {
   client_vault_client_id: number;
   client_vault_id: number;
@@ -10,7 +10,7 @@ export interface ClientVaults {
   client_vault_tag: string;
   client_vault_vault_id: number;
 }
-export interface Vaults {
+export interface Vault {
   vault_IP_address: string;
   vault_assigned_date: string;
   vault_id: number;
@@ -42,7 +42,9 @@ export interface Client {
 })
 export class ApiService {
   api = 'http://localhost:3000';
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) {}
 
   getAllClients(): Observable<Client[]> {
     return this.http.get<Client[]>(this.api + '/clients');
@@ -52,11 +54,11 @@ export class ApiService {
     return this.http.get<Client[]>(this.api + '/clients?client_user_name=' + username);
   }
 
-  getAllClientVaults(): Observable<ClientVaults[]> {
-    return this.http.get<ClientVaults[]>(this.api + '/client_vaults');
+  getAllClientVaults(id): Observable<ClientVaults[]> {
+    return this.http.get<ClientVaults[]>(this.api + '/client_vaults?client_vault_client_id=' + id);
   }
 
-  getAllVaults(): Observable<Vaults[]> {
-    return this.http.get<Vaults[]>(this.api + '/vaults');
+  getAllVaults(): Observable<Vault[]> {
+    return this.http.get<Vault[]>(this.api + '/vaults');
   }
 }

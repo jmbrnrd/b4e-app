@@ -26,14 +26,16 @@ export class VerifyComponent implements OnInit {
     }, 3000);
   }
   scanComplete() {
-    this.scanSuccess = true;
-    this.scanStatusMsg = 'SUCCESSFUL SCAN';
+    if (this.auth.isLoggedIn()) {
+      this.scanSuccess = true;
+      this.scanStatusMsg = 'ACCESS AUTHORISED';
+      this.nextScreen = 'vaults';
+    } else {
+      this.scanSuccess = false;
+      this.scanStatusMsg = 'ACCESS DENIED';
+      this.nextScreen = 'login';
+    }
     setTimeout(() => {
-      if (this.auth.isLoggedIn()) {
-        this.nextScreen = 'vaults';
-      } else {
-        this.nextScreen = 'login';
-      }
       this.router.navigate([this.nextScreen]);
     }, 1000);
   }

@@ -30,8 +30,10 @@ h1, h2, h3, h4, h5, h6{
   font-size:inherit;
   font-weight:inherit;
 }
-p{ margin:0; }
-cite { font-style:normal; }
+p{
+  margin:0 0 .8rem 0;
+}
+cite { font-style: normal; }
 fieldset{
   border-width:0;
   padding:0;

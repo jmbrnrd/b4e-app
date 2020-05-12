@@ -1,36 +1,48 @@
+
+// Not using any Material components yet
 //$mdc-layout-grid-default-gutter: ( desktop: 16px, tablet: 16px, phone: 8px);
 //$mdc-layout-grid-default-margin: ( desktop: 16px, tablet: 16px, phone: 8px);
 //@import "@material/layout-grid/mdc-layout-grid";
-// CDK import
+
+// CDK base styles
 //@import '~@angular/cdk/overlay-prebuilt.css';
 
-// Variables
-$clr-green:   #CCF437;
-$clr-red:     #F44B49;
-$clr-lavender: #983E63;
-$clr-teal: #298C96;
-$clr-blue: #4C9D97;
-$clr-turquoise: #3AC6D2;
-$clr-buff: #F5DF86;
-$clr-light-green: #C9E09A;
-$clr-green: #D5F65C;
-$clr-blue-green: #1E394F;
+// Colour palette
+$clr-green:           #CCF437;
+$clr-red:             #F44B49;
+$clr-lavender:        #983E63;
+$clr-teal:            #298C96;
+$clr-blue:            #4C9D97;
+$clr-turquoise:       #3AC6D2;
+$clr-buff:            #F5DF86;
+$clr-light-green:     #C9E09A;
+$clr-green:           #D5F65C;
+$clr-blue-green:      #1E394F;
 $clr-dark-blue-green: #1a3447;
-$clr-dark-blue: #09273C;
+$clr-dark-blue:       #09273C;
 
-$screen-gutter: 32px;
+// Defaults
+$font-family-std:     "Rubik", "Helvetica Neue", sans-serif;
+$font-weight-std:     300;
+$font-weight-bold:    500;
+$font-weight-display: 700;
+$screen-gutter:       32px;
+$loader-disc-size:    40px;
 
+// Defaults
 @import "normalize";
 @import "reset.local";
 
 html, body {
   height: 100vh;
+  // Set to the value so that rem relates to px size
+  // i.e. 1.6rem = 16px
   font-size: 10px;
 }
 body {
   margin: 0;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-family: $font-family-std;
+  font-weight: $font-weight-std;
   font-size: 1.6rem;
   line-height: 1.4;
   background-image: url("../assets/images/vault-bgd.jpg");
@@ -38,7 +50,26 @@ body {
   background-position: center;
   color: white;
 }
-p { margin-bottom: 1rem; }
+
+// Utilities
+.hide { opacity: 0; }
+.show { opacity: 1; }
+.remove { display: none; }
+
+// Animations
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0.1; }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 0.75);
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 // Branding
 .brand-container {
@@ -59,21 +90,39 @@ p { margin-bottom: 1rem; }
     }
 }
 
+// Default screen
 .screen {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   padding:15vh 32px 10vh;
   min-height: 100vh;
   transition: opacity 1s ease-in-out;
-  &.screen-login,
-  &.screen-verify,
-  &.screen-vaults {
-    display: block;
+  &.screen-centered {
+    justify-content: space-between;
+    align-items: center;
   }
 }
+.screen-title-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  h1 {
+    width: 100%;
+    padding: 0 0 4px;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    color: $clr-green;
+    border-bottom: 1px solid $clr-red;
+  }
+  span {
+    display: block;
+    margin: 0 1rem 0 0;
+  }
+}
+.screen-content { width: 100%; }
 
+// Screen content
 .start-options {
   display: flex;
   flex-direction: column;
@@ -98,7 +147,6 @@ p { margin-bottom: 1rem; }
     }
   }
 
-
   hr {
     border: 0;
     margin: 1rem 0;
@@ -117,38 +165,15 @@ p { margin-bottom: 1rem; }
       font-size: 1em;
     }
   }
-
 }
-a.more {
+a.find-more {
   margin-top: 7.5vh;
   font-size: 2.2rem;
   font-weight: 400;
   color: $clr-red;
 }
 
-.screen-title-bar {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 0 0 1rem;
-  .screen-title {
-    width: 100%;
-    h1 {
-      display: inline-block;
-      width: inherit;
-      padding: 0 0 4px;
-      font-weight: 400;
-      font-size: 2rem;
-      line-height: 1;
-      color: $clr-green;
-      border-bottom: 1px solid $clr-red;
-    }
-  }
-  .screen-icon {
-    margin: 0 1rem 0 0;
-  }
-}
-
+// Todo: create directive
 .frm-login {
   margin-top: 3rem;
   .frm-field {
@@ -161,7 +186,6 @@ a.more {
       color: $clr-green;
       padding-left: 8px;
     }
-
     input {
       margin-top: 4px;
       border: 1px solid $clr-green;
@@ -170,7 +194,6 @@ a.more {
       background-color: rgba($clr-dark-blue, .6);
       color: white;
       font-family: "Rubik", sans-serif;
-
       &::placeholder {
         color: #eee;
         font-weight: 300;
@@ -207,70 +230,67 @@ button {
   }
 }
 
-.verify2-container {
-  margin: 5rem;
-  text-align: center;
-}
-
-// Load screen
-.load-brand {
-  position: absolute;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  img, svg {
-    display: block;
-    margin-top: -18vh;
-    width: 38vw;
-    height: auto;
-    animation: zoomIn 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  p {
-    text-align: center;
-    line-height: 1.2;
-    font-size: 1.4rem;
-    color: white;
-    margin-top: 1rem;
-    width: 62vw;
-  }
-}
-
-$loader-disc-size: 40px;
-.loadbar {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 100;
-  bottom:0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: $loader-disc-size $screen-gutter;
-  div {
-    width: $loader-disc-size;
-    height: $loader-disc-size;
-    border-radius: 100%;
-    background-color: $clr-red;
-    animation: fade-out 1.7s infinite ease-in-out;
-    &.disc1 { opacity: 1; animation-delay: -1s; }
-    &.disc2 { opacity: 0.2; animation-delay: -0.8s; }
-    &.disc3 { opacity: 0.4; animation-delay: -0.6s; }
-    &.disc4 { opacity: 0.6; animation-delay: -0.4s; }
-    &.disc5 { opacity: 0.8; animation-delay: -0.2s; }
-  }
-}
-
 app-load {
+  // This sits above all screen content
+  // so ignore any click/taps
   pointer-events:none;
   transition: opacity .3s ease-out;
   opacity: 0;
+  // Load screen-centered
+  .load-brand {
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    img, svg {
+      display: block;
+      margin-top: -18vh;
+      width: 38vw;
+      height: auto;
+      animation: zoomIn 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    p {
+      text-align: center;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      color: white;
+      margin-top: 1rem;
+      width: 62vw;
+    }
+  }
+  .load-bar {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: $loader-disc-size $screen-gutter;
+    div {
+      width: $loader-disc-size;
+      height: $loader-disc-size;
+      border-radius: 100%;
+      background-color: $clr-red;
+      animation: fade-out 1.7s infinite ease-in-out;
+      &.disc1 { opacity: 1; animation-delay: -1s; }
+      &.disc2 { opacity: 0.2; animation-delay: -0.8s; }
+      &.disc3 { opacity: 0.4; animation-delay: -0.6s; }
+      &.disc4 { opacity: 0.6; animation-delay: -0.4s; }
+      &.disc5 { opacity: 0.8; animation-delay: -0.2s; }
+    }
+  }
 }
 
-.nav-container {
+app-nav.nav-default {
+  .nav-bar { transform: translateY(-64px);}
+}
+.nav-bar-container {
   position: fixed;
   z-index: 10;
   top: 100vh; left: 0;
@@ -300,7 +320,7 @@ app-load {
       }
     }
   }
-  .nav-more {
+  .nav-bar-more {
     position: absolute;
     z-index: 5;
     top: 0;
@@ -310,9 +330,7 @@ app-load {
     background-color: $clr-dark-blue;
     transform: translateY(0);
     transition: all 250ms ease-out;
-    &.open {
-      transform: translateY(calc(-100% + -64px));
-    }
+    &.open { transform: translateY(calc(-100% + -64px)); }
     a {
       display: block;
       height: 64px;
@@ -322,31 +340,30 @@ app-load {
     }
   }
 }
-app-nav.nav-default {
-  .nav-bar { transform: translateY(-64px);}
-}
-
-.hide { opacity: 0; }
-.show { opacity: 1; }
-.remove { display: none; }
 
 .fingerprint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   svg g {
     stroke: $clr-red;
     transition: stroke 300ms linear;
   }
-  &.success {
-    svg g { stroke: $clr-green; }
+  p {
+    margin-top: 1rem;
+    text-align: center;
   }
+  &.success { svg g { stroke: $clr-green; } }
 }
 
-// Vaults
+// Private vaults
 .vault-list {
   .vault {
     margin-top: 1rem;
     width: 100%;
     height: 80px;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: rgba($clr-dark-blue, 0.75);
     border-radius: 4px;
     border: 1px solid $clr-red;
@@ -375,21 +392,6 @@ app-nav.nav-default {
       display: flex;
       justify-content: flex-end;
     }
-  }
-}
-
-// Animations
-@keyframes fade-out {
-  0% { opacity: 1; }
-  100% { opacity: 0.1; }
-}
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(0.75, 0.75, 0.75);
-  }
-  50% {
-    opacity: 1;
   }
 }
 

@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
   nav(tgt) {
     console.log(tgt);
     switch (tgt) {
-      case 'more': {
+      case 'find-more': {
         this.router.navigate([]);
         break;
       }

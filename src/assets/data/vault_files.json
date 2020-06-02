@@ -1,0 +1,72 @@
+[
+  {
+    "vault_file_id"			    : 1,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "ff-will.pdf",
+    "vault_file_filedate"		: "02/05/2020 18:45",
+    "vault_file_filesize"		: "43KB"
+  },
+  {
+    "vault_file_id"			    : 2,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "ff-stocks.xlsx",
+    "vault_file_filedate"		: "07/05/2020 09:15",
+    "vault_file_filesize"		: "79KB"
+  },
+  {
+    "vault_file_id"			    : 3,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "wedding-group-1.jpg",
+    "vault_file_filedate"		: "23/12/2006 10:30",
+    "vault_file_filesize"		: "3.7MB"
+  },
+  {
+    "vault_file_id"			    : 4,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "wedding-group-2.jpg",
+    "vault_file_filedate"		: "23/12/2006 10:31",
+    "vault_file_filesize"		: "3.8MB"
+  },
+  {
+    "vault_file_id"			    : 5,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "wedding-group-3.jpg",
+    "vault_file_filedate"		: "23/12/2006 10:32",
+    "vault_file_filesize"		: "3.6MB"
+  },
+  {
+    "vault_file_id"			    : 6,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "wedding-group-4.jpg",
+    "vault_file_filedate"		: "23/12/2006 10:34",
+    "vault_file_filesize"		: "4.3MB"
+  },
+  {
+    "vault_file_id"			    : 7,
+    "vault_file_vault_id"   : 4,
+    "vault_file_filename"	  : "ff-Contacts.docx",
+    "vault_file_filedate"		: "07/05/2020 09:15",
+    "vault_file_filesize"		: "79KB"
+  },
+  {
+    "vault_file_id"			    : 8,
+    "vault_file_vault_id"   : 5,
+    "vault_file_filename"	  : "ff-Morgan Stanley-Contract-V3.pdf",
+    "vault_file_filedate"		: "01/03/2018 11:05",
+    "vault_file_filesize"		: "137KB"
+  },
+  {
+    "vault_file_id"			    : 9,
+    "vault_file_vault_id"   : 5,
+    "vault_file_filename"	  : "ff-B4E-Contract-V1.pdf",
+    "vault_file_filedate"		: "27/11/2019 17:35",
+    "vault_file_filesize"		: "83KB"
+  },
+  {
+    "vault_file_id"			    : 10,
+    "vault_file_vault_id"   : 5,
+    "vault_file_filename"	  : "ff-B4E-T&Cs-Image.jpg",
+    "vault_file_filedate"		: "27/11/2019 17:37",
+    "vault_file_filesize"		: "7.8MB"
+  }
+]

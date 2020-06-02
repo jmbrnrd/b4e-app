@@ -36,6 +36,13 @@ export interface Client {
   client_user_name: string;
   client_verified_date: string;
 }
+export interface VaultFile {
+  vault_file_id: number;
+  vault_file_vault_id: number;
+  vault_file_filename: string;
+  vault_file_filedate: string;
+  vault_file_filesize: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -61,4 +68,9 @@ export class ApiService {
   getVault(id): Observable<Vault[]> {
     return this.http.get<Vault[]>(this.api + '/vaults/?vault_id=' + id);
   }
+
+  getVaultFiles(id): Observable<VaultFile[]> {
+    return this.http.get<VaultFile[]>(this.api + '/vaults/?vault_file_vault_id=' + id);
+  }
+
 }

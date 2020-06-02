@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { VerifyComponent } from './verify/verify.component';
 import { VaultsComponent } from './vaults/vaults.component';
+import { VaultComponent } from './vaults/vault.component';
 
 const routes: Routes = [
   // Default route
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'verify', component: VerifyComponent },
   { path: 'vaults', component: VaultsComponent },
+  { path: 'vault/:id', component: VaultComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '/' }
 ];

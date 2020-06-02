@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ios_addition_filled</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-logos-copy" transform="translate(-891.000000, -763.000000)">
+            <g id="icon_ios_addition_filled" transform="translate(880.000000, 752.000000)">
+                <rect id="@bounds" x="0" y="0" width="72" height="72"></rect>
+                <path d="M34.8095238,34.8095238 L22.9047619,34.8095238 L22.9047619,37.1904762 L34.8095238,37.1904762 L34.8095238,49.0952381 L37.1904762,49.0952381 L37.1904762,37.1904762 L49.0952381,37.1904762 L49.0952381,34.8095238 L37.1904762,34.8095238 L37.1904762,22.9047619 L34.8095238,22.9047619 L34.8095238,34.8095238 Z M36,61 C22.1928813,61 11,49.8071187 11,36 C11,22.1928813 22.1928813,11 36,11 C49.8071187,11 61,22.1928813 61,36 C61,49.8071187 49.8071187,61 36,61 Z" id="Shape" fill="#F44B49" fill-rule="nonzero" transform="translate(36.000000, 36.000000) rotate(45.000000) translate(-36.000000, -36.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

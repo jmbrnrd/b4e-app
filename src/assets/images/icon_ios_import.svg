@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="51px" viewBox="0 0 38 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ios_import</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-logos-copy" transform="translate(-327.000000, -176.000000)">
+            <g id="icon_ios_import" transform="translate(310.000000, 164.000000)">
+                <rect id="@bounds" x="0" y="0" width="72" height="72"></rect>
+                <path d="M31,25 L31,27 L19,27 L19,61 L53,61 L53,27 L41,27 L41,25 L55,25 L55,63 L17,63 L17,25 L31,25 Z" id="Rectangle-57" fill="#FFFFFF"></path>
+                <path d="M37,15.9811153 L37,46 L35,46 L35,15.9835666 L29.1403198,21.8540039 L27.6584473,20.3562622 L36,12.0024503 L36,12 L36.0012234,12.0012252 L36.0024467,12 L36.0028242,12.0028284 L44.3439995,20.3562622 L42.8621269,21.8540039 L37,15.9811153 Z" id="Rectangle-57" fill="#FFFFFF" transform="translate(36.001223, 29.000000) scale(1, -1) translate(-36.001223, -29.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

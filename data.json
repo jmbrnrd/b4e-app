@@ -63,6 +63,15 @@
       "client_type": "Corporate",
       "client_user_name": "gg",
       "client_verified_date": "02/04/2018"
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
     }
   ],
   "client_vaults": [
@@ -98,7 +107,7 @@
       "client_vault_client_id": 4,
       "client_vault_id": 8,
       "client_vault_password": "gg",
-       "client_vault_tag": "Birmingham",
+      "client_vault_tag": "Birmingham",
       "client_vault_vault_id": 8
     }
   ],
@@ -150,7 +159,7 @@
       "vault_installed_date": "01/04/2018",
       "vault_name": "P4382/677S",
       "vault_physical_address": "Rack 2, Slot 1",
-      "vault_status": "Active",
+      "vault_status": "Closed",
       "vault_type": "Private"
     },
     {

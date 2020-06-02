@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="33px" viewBox="0 0 34 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ios_cancel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-logos-copy" transform="translate(-497.000000, -944.000000)">
+            <g id="icon_ios_cancel" transform="translate(478.000000, 924.000000)">
+                <rect id="@bounds" x="0" y="0" width="72" height="72"></rect>
+                <path d="M36,39 L22.0008236,52.9991764 L19.4991764,50.5005387 L33.4999229,36.4999229 L19.5,22.5 L21.9986376,19.9983527 L36.0000117,33.9998576 L50.0008236,19.9991764 L52.5008236,22.4991764 L38.5000654,36.4999346 L52.5,50.5 L50,53 L36,39 Z" id="Rectangle-136" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

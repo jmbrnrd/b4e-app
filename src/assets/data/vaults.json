@@ -46,7 +46,7 @@
     "vault_installed_date"  : "01/04/2018",
     "vault_name"            : "P4382/677S",
     "vault_physical_address": "Rack 2, Slot 1",
-    "vault_status"          : "Active",
+    "vault_status"          : "Closed",
     "vault_type"            : "Private"
   },
   {

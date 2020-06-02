@@ -17,19 +17,46 @@
   </div>
   <div class="screen-content">
     <p>{{ greetingMessage }}</p>
-    <div class="vault-list" #myVaultContainer>
+    <!-- Private vaults -->
+    <div class="vault-list">
+      <!-- Vault -->
       <div
-        class="vault"
+        #vaultList
+        class="vault-list-item"
+
         *ngFor="let vault of privateVaults; let i = index"
-        (click)="selectVault(i)"
-        #vaultList>
-        <div class="vault-title-bar">
-          <img src="assets/images/icon-vault.svg" alt="Private vault">
-          <h2>{{ vault.client_vault_tag | uppercase }}</h2>
-        </div>
-        <div class="vault-body">
-          <span>{{ vault.client_vault_vault_id }}</span>
-        </div>
+        (click)="accessToVault(i)">
+        <form id="vaultItem{{i}}" class="vault-inner" #frm="ngForm" (ngSubmit)="frm.form.valid &&
+        verifyVaultPassword(frm)">
+          <input type="hidden" name="idx" [ngModel]="i">
+          <div class="vault-front" (click)="accessToVault(i)">
+            <div class="vault-panel-left">
+              <span>VAULT: {{ vault['client_vault_vault_id'] }}</span>
+              <h2>{{ vault['client_vault_tag'] }}</h2>
+            </div>
+            <div class="vault-panel-right">
+              <img src="assets/images/icon-lock-red.svg" alt="Private vault">
+            </div>
+          </div>
+          <div class="vault-back frm-vault" [class.success]="accessAllowed">
+            <div class="vault-panel-left">
+              <span>VAULT: {{ vault['client_vault_vault_id'] }}</span>
+              <input
+                ngModel
+                name="password"
+                id="input{{i}}"
+                type="password"
+                required
+                placeholder="Vault password">
+            </div>
+            <div class="vault-panel-right">
+              <button type="submit">
+                <img *ngIf="!accessAllowed" src="assets/images/icon-lock-red.svg" alt="Private vault">
+                <img *ngIf="accessAllowed" src="assets/images/icon-lock-open-green.svg" alt="Private vault">
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

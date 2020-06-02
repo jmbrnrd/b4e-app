@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_ios_checked_filled</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-logos-copy" transform="translate(-237.000000, -763.000000)">
+            <g id="icon_ios_checked_filled" transform="translate(226.000000, 752.000000)">
+                <rect id="@bounds" x="0" y="0" width="72" height="72"></rect>
+                <path d="M61,36 C61,49.8071187 49.8071187,61 36,61 C22.1928813,61 11,49.8071187 11,36 C11,22.1928813 22.1928813,11 36,11 C49.8071187,11 61,22.1928813 61,36 Z M22.9098487,36 L20.5257763,38.3809524 L30.047619,47.9047619 L50.2833799,27.6666667 L47.9047619,25.2857143 L30.047619,43.1428571 L22.9098487,36 Z" id="Shape" fill="#D6F65D" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

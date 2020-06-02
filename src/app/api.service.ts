@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 
 // Models
-export interface ClientVaults {
+export interface ClientVault {
   client_vault_client_id: number;
   client_vault_id: number;
   client_vault_password: string;
@@ -54,11 +54,11 @@ export class ApiService {
     return this.http.get<Client[]>(this.api + '/clients?client_user_name=' + username);
   }
 
-  getAllClientVaults(id): Observable<ClientVaults[]> {
-    return this.http.get<ClientVaults[]>(this.api + '/client_vaults?client_vault_client_id=' + id);
+  getAllClientVaults(id): Observable<ClientVault[]> {
+    return this.http.get<ClientVault[]>(this.api + '/client_vaults?client_vault_client_id=' + id);
   }
 
-  getAllVaults(): Observable<Vault[]> {
-    return this.http.get<Vault[]>(this.api + '/vaults');
+  getVault(id): Observable<Vault[]> {
+    return this.http.get<Vault[]>(this.api + '/vaults/?vault_id=' + id);
   }
 }

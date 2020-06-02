@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-268.000000, -819.000000)" fill="#D6F65D" fill-rule="nonzero">
+            <g id="icon_ios_addition_filled" transform="translate(252.000000, 803.000000)">
+                <path d="M35,35 L26,35 L26,37 L35,37 L35,47 L37,47 L37,37 L47,37 L47,35 L37,35 L37,26 L35,26 L35,35 Z M36,56 C24.954305,56 16,47.045695 16,36 C16,24.954305 24.954305,16 36,16 C47.045695,16 56,24.954305 56,36 C56,47.045695 47.045695,56 36,56 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

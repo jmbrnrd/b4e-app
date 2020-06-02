@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import base64url from 'base64url';
 
 @Component({
   selector: 'app-start',

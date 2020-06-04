@@ -232,7 +232,7 @@
     {
       "vault_file_id"			    : 6,
       "vault_file_vault_id"   : 4,
-      "vault_file_filename"	  : "wedding-group-4.jpg",
+      "vault_file_filename"	  : "wedding-group-4.mp4",
       "vault_file_filedate"		: "23/12/2006 10:34",
       "vault_file_filesize"		: "4.3MB"
     },
@@ -263,6 +263,13 @@
       "vault_file_filename"	  : "ff-B4E-T&Cs-Image.jpg",
       "vault_file_filedate"		: "27/11/2019 17:37",
       "vault_file_filesize"		: "7.8MB"
+    },
+    {
+      "vault_file_id"			    : 11,
+      "vault_file_vault_id"   : 4,
+      "vault_file_filename"	  : "board-meeting.mp3",
+      "vault_file_filedate"		: "23/12/2006 10:30",
+      "vault_file_filesize"		: "3.7MB"
     }
-]
+  ]
 }

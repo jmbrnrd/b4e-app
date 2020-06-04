@@ -2,6 +2,7 @@
   class="screen screen-vault hide"
   [class.show]="!isLoading">
   <div class="screen-vault-inner">
+
     <!-- Info panel -->
     <div
       class="vault-info"
@@ -10,20 +11,21 @@
       <div class="vault-title">
         <img *ngIf="!vaultActive" src="assets/images/ic24-closed@2x.png">
         <img *ngIf="vaultActive" src="assets/images/ic24-open@2x.png">
-        <h1>{{ clientVault?.client_vault_tag }}</h1></div>
-        <div *ngIf="vaultActive">
-          <p>{{ vaultStatusMsgActive }}</p>
-          <p>{{ vaultInfoMsgActive  }}</p>
-        </div>
-        <div *ngIf="!vaultActive">
-          <p>{{ vaultStatusMsgClosed }}</p>
-          <p>{{ vaultInfoMsgClosed  }}</p>
-        </div>
+        <h1>{{ clientVault?.client_vault_tag }}</h1>
+      </div>
+      <div *ngIf="vaultActive">
+        <p>{{ vaultStatusMsgActive }}</p>
+        <p>{{ vaultInfoMsgActive  }}</p>
+      </div>
+      <div *ngIf="!vaultActive">
+        <p>{{ vaultStatusMsgClosed }}</p>
+        <p>{{ vaultInfoMsgClosed  }}</p>
+      </div>
     </div>
+
     <!-- Options -->
     <div class="vault-options">
-
-      <a class="vault-option" [class.active]="vaultActive">
+      <a class="vault-option" (click)="showVaultContent()" [class.active]="vaultActive">
         <img class="icon" *ngIf="vaultActive" src="assets/images/ic24-view-active@2x.png">
         <img class="icon" *ngIf="!vaultActive" src="assets/images/ic24-view@2x.png">
         <h2>SHOW VAULT CONTENTS</h2>
@@ -37,13 +39,6 @@
         <span class="space-fill"></span>
         <img class="graphic" src="assets/images/icon-dots.svg">
       </a>
-<!--      <a class="vault-option" [class.active]="vaultActive">-->
-<!--        <img class="icon" *ngIf="vaultActive" src="assets/images/ic24-retrieve-asset-active@2x.png">-->
-<!--        <img class="icon" *ngIf="!vaultActive" src="assets/images/ic24-retrieve-asset@2x.png">-->
-<!--        <h2>RETRIEVE AN ASSET</h2>-->
-<!--        <span class="space-fill"></span>-->
-<!--        <img class="graphic" src="assets/images/icon-dots.svg">-->
-<!--      </a>-->
       <a class="vault-option" [class.active]="vaultActive">
         <img class="icon" *ngIf="vaultActive" src="assets/images/ic24-manage-active@2x.png">
         <img class="icon" *ngIf="!vaultActive" src="assets/images/ic24-manage@2x.png">
@@ -59,8 +54,8 @@
         <img class="graphic" src="assets/images/icon-dots.svg">
       </a>
       <a class="vault-option" [class.active]="!vaultActive">
-        <img class="icon" *ngIf="!vaultActive" src="assets/images/ic24-manage-app-active@2x.png">
-        <img class="icon" *ngIf="vaultActive" src="assets/images/ic24-manage-app@2x.png">
+        <img class="icon" *ngIf="!vaultActive" src="assets/images/ic24-manage-active@2x.png">
+        <img class="icon" *ngIf="vaultActive" src="assets/images/ic24-manage@2x.png">
         <h2>MANAGE LOADBAY</h2>
         <span class="space-fill"></span>
         <img class="graphic" src="assets/images/icon-dots.svg">
@@ -72,7 +67,11 @@
         <img class="graphic" src="assets/images/icon-dots.svg">
       </a>
     </div>
+
   </div>
+
+
+
 </div>
 <app-load [class.show]="isLoading" [loadMessage]="loadMessage"></app-load>
 

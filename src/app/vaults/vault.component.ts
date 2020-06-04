@@ -11,14 +11,13 @@ export class VaultComponent implements OnInit {
   isLoading = true;
   loadMessage = '';
   vaultActive = false;
+  vault: Vault;
+  clientVault: ClientVault;
   vaultStatusMsgClosed = 'This VAULT is currently closed.';
   vaultStatusMsgActive = 'This VAULT is currently available.';
   vaultInfoMsgActive = 'Last accessed: ';
   vaultInfoMsgClosed = 'You can upload digital assets to the B4E LoadBay. ' +
   'These assets will be encrypted and transferred to your VAULT, when it next opens.';
-  vault: Vault;
-  clientVault: ClientVault;
-
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -36,6 +35,7 @@ export class VaultComponent implements OnInit {
             this.vault = vault[0];
             this.vaultActive = this.vault.vault_status.toLowerCase() === 'active';
             this.clientVault = this.vaultService.getClientVault();
+            this.vaultService.setVault(this.vault);
             console.log(this.vault);
           });
         } else {
@@ -45,6 +45,10 @@ export class VaultComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     }, 3000);
+  }
+  showVaultContent() {
+    console.log('Show Content');
+    this.router.navigate(['vault', this.vault.vault_id, 'content']);
   }
   closeVault() {
     this.vaultService.setClientVault(null);

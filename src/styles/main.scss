@@ -30,6 +30,7 @@ $font-weight-bold:    500;
 $font-weight-display: 700;
 $screen-gutter:       32px;
 $loader-disc-size:    40px;
+$navBarHeight:        72px;
 
 // Defaults
 @import "normalize";
@@ -290,7 +291,10 @@ app-load {
 }
 
 app-nav.nav-default {
-  .nav-bar { transform: translateY(-64px);}
+  .nav-bar {
+    height: $navBarHeight;
+    transform: translateY(-$navBarHeight);
+  }
 }
 .nav-bar-container {
   position: fixed;
@@ -332,11 +336,11 @@ app-nav.nav-default {
     background-color: $clr-dark-blue-green;
     transform: translateY(0);
     transition: all 250ms ease-out;
-    &.open { transform: translateY(calc(-100% + -64px)); }
+    &.open { transform: translateY(calc(-100% + -#{$navBarHeight})); }
     a {
       display: block;
-      height: 64px;
-      line-height: 64px;
+      height: $navBarHeight;
+      line-height: $navBarHeight;
       padding: 0 $screen-gutter;
       border-bottom: 1px solid $clr-blue-green;
     }
@@ -348,6 +352,7 @@ app-nav.nav-default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 64px;
   svg g {
     stroke: $clr-red;
     transition: stroke 300ms linear;
@@ -369,7 +374,7 @@ app-nav.nav-default {
   height: 8.8rem;
   background-color: transparent;
   perspective: 1000px;
-  .vault-inner {
+  .vault-list-item-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -378,7 +383,7 @@ app-nav.nav-default {
     background-color: transparent;
   }
   &:hover, &:focus {
-    .vault-inner{ transform: rotateX(180deg); }
+    .vault-list-item-inner{ transform: rotateX(180deg); }
   }
   .vault-front,
   .vault-back {
@@ -462,82 +467,52 @@ app-nav.nav-default {
   }
 }
 span.space-fill { flex: 1 auto; }
-.screen-vault {}
-.screen-vault-content {
-  background-color: $clr-dark-blue;
-  padding:16px;
-  width: 100vw;
-  height: 100vh;
-  .screen-vault-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px 4px 0 0;
-    border: 2px solid $clr-blue-green;
-  }
-}
-.screen-vault-inner {
-  display: flex;
-  flex-direction: column;
+
+.screen-vault {
   background-color: $clr-dark-blue;
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  top:0; right: 0; bottom: 0; left: 0;
   padding: 16px;
-  transform: scale(1);
+}
+.vault-inner {
+  height: calc(100vh - 32px - #{$navBarHeight});
+  border-radius: 4px;
+  border: 2px solid $clr-red;
+  overflow: auto;
+  .vault-info-panel {
+    border-bottom: 2px solid $clr-red;
+    color: $clr-red;
+    .vault-info-panel-content { padding: 8px; }
+    .ref {
+      color: white;
+      text-align: right;
+      font-size: 1.1rem;
+    }
+    .vault-title {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      img { width: 32px; }
+      h1 {
+        color: inherit;
+        font-size: 2rem;
+        font-weight: $font-weight-bold;
+        margin: 4px 0 0 4px;
+      }
+    }
+  }
+  &.vault-active {
+    border-color: $clr-green;
+    .vault-info-panel {
+      border-bottom: 2px solid $clr-green;
+      color: $clr-green;
+    }
+  }
 }
 
-.vault-info,
-.vault-contents {
-  background-color: $clr-dark-blue;
-  position: relative;
-  height: 100%;
-  border-radius: 4px 4px 0 0;
-  border: 2px solid $clr-blue-green;
-  margin-bottom: 0;
-  padding: 0;
-  color: $clr-green;
-  .vault-title {
-    display: flex;
-    //border-bottom: 2px solid $clr-blue-green;
-    padding: 8px;
-    margin: 16px 0 8px;
-    color: $clr-green;
-  }
-  span {
-    display: block;
-    font-size: 1.1rem;
-    padding: 8px;
-    text-align: right;
-    color: $clr-red;
-  }
-  img {
-    height: 3.2rem;
-    margin-right: 4px;
-  }
-  h1 {
-    font-weight: $font-weight-bold;
-    font-size: 2.4rem;
-    line-height: 1.6;
-    margin: 0;
-    width: 100%;
-  }
-  p {
-    font-size: 1.4rem;
-    color: white;
-  }
-  &.available { color: $clr-green; }
-}
-.vault-contents {
-  background-color: $clr-dark-blue;
-  border: 2px solid $clr-green;
-  border-radius: 4px;
-  position: relative;
-  min-height: calc(100vh - 32px);
-  margin: 0;
-  padding: 0;
-  color: white;
+
+.vault-assets {
+  p { margin: 16px; }
   ul {
     li {
       display: flex;
@@ -546,7 +521,6 @@ span.space-fill { flex: 1 auto; }
       align-items: center;
       border-bottom: 1px solid $clr-blue-green;
       padding: 12px;
-
       img.icon {
         width: 24px;
         height: auto;
@@ -568,37 +542,6 @@ span.space-fill { flex: 1 auto; }
     }
   }
 }
-.vault-options {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: $clr-blue-green;
-  .vault-option {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 12px 16px;
-    height: 64px;
-    width: 100%;
-    border-bottom: 2px solid $clr-dark-blue;
-    border-radius: 2px;
-    color: $clr-dark-blue;
-    .icon { width: 24px; }
-    .graphic {
-      height: 20px;
-      opacity: 0.15;
-    }
-    h2 {
-      padding: 0;
-      margin: 0 0 0 8px;
-      font-size: 1.4rem;
-    }
-    &.active {
-      h2 { color: $clr-green;}
-    }
-  }
 
-}
 
 

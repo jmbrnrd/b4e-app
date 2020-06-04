@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Client, ClientVault, Vault } from '../api.service';
+import { ApiService, Client, ClientVault, Vault } from '../api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,19 +8,24 @@ export class VaultService {
   client: Client;
   clientVault: ClientVault;
   vault: Vault;
-  constructor() { }
+  constructor(
+    private api: ApiService
+  ) { }
 
   setClientVault(clientVault) {
-    this.setVault(clientVault.client_vault_vault_id);
+    this.setVaultById(clientVault.client_vault_vault_id);
     this.clientVault = clientVault;
   }
   getClientVault(): ClientVault {
     return this.clientVault;
   }
-  setVault(vault) {
-    this.vault = vault;
+  setVaultById(id) {
+    this.api.getVault(id).subscribe(vault => {
+      this.vault = vault[0];
+      console.log('Vault set to: ' + this.vault);
+    });
   }
-  getVault(): Vault {
+  getCurrentVault(): Vault {
     return this.vault;
   }
 }

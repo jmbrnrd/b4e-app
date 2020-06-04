@@ -1,6 +1,32 @@
-<div class="nav-bar-container">
+<div class="nav-bar-container" [ngSwitch]="contentType">
 
-  <div class="nav-bar">
+  <div class="nav-bar" *ngSwitchCase="'vault'">
+    <a (click)="exitVault()">
+      <img src="assets/images/ic64-lock-closed@2x.png">
+    </a>
+    <a (click)="addToVault()">
+      <img src="assets/images/ic64-add@2x.png">
+    </a>
+    <a (click)="manageVault()">
+      <img src="assets/images/ic64-settings@2x.png">
+    </a>
+  </div>
+
+  <div class="nav-bar" *ngSwitchCase="'loadbay'">
+
+      <a (click)="exitLoadBay()">
+        <img src="assets/images/ic64-lock-closed@2x.png">
+      </a>
+      <a (click)="addToLoadBay()">
+        <img src="assets/images/ic64-add@2x.png">
+      </a>
+      <a (click)="clearLoadBay()">
+        <img src="assets/images/ic64-close@2x.png">
+      </a>
+
+  </div>
+
+  <div class="nav-bar" *ngSwitchDefault>
     <a (click)="nav('settings')">
       <img src="assets/images/icon-settings.svg" alt="Vault Settings">
     </a>

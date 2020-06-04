@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, ClientVault, Vault } from '../api.service';
+import { ApiService, ClientVault, Vault, VaultFile } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VaultService } from './vault.service';
 
@@ -9,15 +9,13 @@ import { VaultService } from './vault.service';
 })
 export class VaultComponent implements OnInit {
   isLoading = true;
-  loadMessage = '';
-  vaultActive = false;
-  vault: Vault;
+  loadMessage: string;
+  contentType: string;
   clientVault: ClientVault;
-  vaultStatusMsgClosed = 'This VAULT is currently closed.';
-  vaultStatusMsgActive = 'This VAULT is currently available.';
-  vaultInfoMsgActive = 'Last accessed: ';
-  vaultInfoMsgClosed = 'You can upload digital assets to the B4E LoadBay. ' +
-  'These assets will be encrypted and transferred to your VAULT, when it next opens.';
+  vault: Vault;
+  vaultAssets: Array<VaultFile>;
+  vaultActive = false;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -26,30 +24,34 @@ export class VaultComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.loadMessage = 'Authenticating vault access';
-    this.route.paramMap
-      .subscribe(params => {
-        console.log(params);
-        if (params.has('id')) {
-          this.api.getVault(params.get('id')).subscribe(vault => {
-            this.vault = vault[0];
-            this.vaultActive = this.vault.vault_status.toLowerCase() === 'active';
-            this.clientVault = this.vaultService.getClientVault();
-            this.vaultService.setVault(this.vault);
-            console.log(this.vault);
-          });
-        } else {
-          console.log('No params');
-        }
-      });
+    this.loadMessage = 'Attempting to access vault contents';
+    this.clientVault = this.vaultService.getClientVault();
+    this.vault = this.vaultService.getCurrentVault();
+    this.vaultActive = this.vault.vault_status.toLowerCase() === 'active';
+    this.contentType = this.vaultActive ? 'vault' : 'loadbay';
+    console.log(this.vault.vault_id);
+    this.api.getVaultAssets(this.vault.vault_id).subscribe(assets => {
+      this.vaultAssets = assets;
+      console.log('Assets', this.vaultAssets);
+    });
     setTimeout(() => {
       this.isLoading = false;
     }, 3000);
   }
-  showVaultContent() {
-    console.log('Show Content');
-    this.router.navigate(['vault', this.vault.vault_id, 'content']);
+
+  getFileType(file): string {
+    const type = file.split('.').pop().toLowerCase();
+    if (['jpg', 'png', 'bmp', 'tif', 'jpeg'].indexOf(type) > -1) {
+      return 'img';
+    } else if (['wav', 'mp3'].indexOf(type) > -1) {
+      return 'rec';
+    } else if (['mov', 'mp4'].indexOf(type) > -1) {
+      return 'vid';
+    } else {
+      return 'doc';
+    }
   }
+
   closeVault() {
     this.vaultService.setClientVault(null);
     this.router.navigate(['vaults']);

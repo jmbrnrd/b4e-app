@@ -69,7 +69,8 @@ export class ApiService {
     return this.http.get<Vault[]>(this.api + '/vaults/?vault_id=' + id);
   }
 
-  getVaultFiles(id): Observable<VaultFile[]> {
+  getVaultAssets(id): Observable<VaultFile[]> {
+    console.log('getVaultAssets');
     return this.http.get<VaultFile[]>(this.api + '/vaultfiles/?vault_file_vault_id=' + id);
   }
 

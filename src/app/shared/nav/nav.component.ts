@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 
@@ -7,6 +7,7 @@ import { AuthService } from '../../auth.service';
   templateUrl: './nav.component.html'
 })
 export class NavComponent implements OnInit {
+  @Input() contentType;
   navOpen = false;
   constructor(
     private auth: AuthService,
@@ -34,6 +35,24 @@ export class NavComponent implements OnInit {
     }
   }
   navMore() {
+    this.navOpen = !this.navOpen;
+  }
+  exitLoadBay() {
+    this.router.navigate(['vaults']);
+  }
+  addToLoadBay() {
+    alert('ADD');
+  }
+  clearLoadBay() {
+    alert('CLEAR');
+  }
+  exitVault() {
+    this.router.navigate(['vaults']);
+  }
+  addToVault() {
+    alert('ADD');
+  }
+  manageVault() {
     this.navOpen = !this.navOpen;
   }
 }

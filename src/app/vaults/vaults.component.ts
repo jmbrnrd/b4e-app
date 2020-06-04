@@ -87,7 +87,9 @@ export class VaultsComponent implements OnInit, AfterViewInit {
         setTimeout(go, 500);
       };
       this.vaultService.setClientVault(this.privateVaults[f.idx]);
-      const go = () => { this.router.navigate(['vault', this.privateVaults[f.idx].client_vault_vault_id]); };
+      const go = () => {
+        this.router.navigate(['vault', this.privateVaults[f.idx].client_vault_vault_id]);
+      };
       setTimeout(aa, 500);
     } else {
       console.log('Access denied');

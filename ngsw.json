@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1591187199884,
+  "timestamp": 1591263089451,
   "index": "/b4e/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/b4e/favicon.ico",
         "/b4e/index.html",
-        "/b4e/main-es2015.cccea4217fd2bb2e4146.js",
-        "/b4e/main-es5.cccea4217fd2bb2e4146.js",
+        "/b4e/main-es2015.7f1b55313b110e890c13.js",
+        "/b4e/main-es5.7f1b55313b110e890c13.js",
         "/b4e/manifest.webmanifest",
         "/b4e/polyfills-es2015.d8a44a7976cb9f02e87b.js",
         "/b4e/polyfills-es5.ab6d4370d6e1c9408f05.js",
         "/b4e/runtime-es2015.0811dcefd377500b5b1a.js",
         "/b4e/runtime-es5.0811dcefd377500b5b1a.js",
-        "/b4e/styles.1025b22535210b820e04.css"
+        "/b4e/styles.e94573069ca84830d58d.css"
       ],
       "patterns": []
     },
@@ -44,6 +44,13 @@
         "/b4e/assets/images/ic24-@2x.svg",
         "/b4e/assets/images/ic24-close@2x.png",
         "/b4e/assets/images/ic24-closed@2x.png",
+        "/b4e/assets/images/ic24-filetype-doc.png",
+        "/b4e/assets/images/ic24-filetype-img.png",
+        "/b4e/assets/images/ic24-filetype-jpg.png",
+        "/b4e/assets/images/ic24-filetype-mp3.png",
+        "/b4e/assets/images/ic24-filetype-pdf.png",
+        "/b4e/assets/images/ic24-filetype-rec.png",
+        "/b4e/assets/images/ic24-filetype-vid.png",
         "/b4e/assets/images/ic24-loadbay-active@2x.png",
         "/b4e/assets/images/ic24-loadbay@2x.png",
         "/b4e/assets/images/ic24-manage-active@2x.png",
@@ -148,6 +155,13 @@
     "/b4e/assets/images/ic24-@2x.svg": "0d7bfbf7622cf96ce23f9d874fe8e7e89a84337a",
     "/b4e/assets/images/ic24-close@2x.png": "4d152ee71c32f1c14d8a52083eae7d1ad7600532",
     "/b4e/assets/images/ic24-closed@2x.png": "d7976e091e48fbe0bb59de0150321714da82677a",
+    "/b4e/assets/images/ic24-filetype-doc.png": "6a2f45b449ae55b61a72cd40fc03531159daa527",
+    "/b4e/assets/images/ic24-filetype-img.png": "c3779d956836bde7e5e4dcaebf02655a85ec9030",
+    "/b4e/assets/images/ic24-filetype-jpg.png": "599189244de2bb5c2db3ed3a77c8e250486c3ebb",
+    "/b4e/assets/images/ic24-filetype-mp3.png": "37e5eb06495bbb8901c71b5de05cb1d38c918015",
+    "/b4e/assets/images/ic24-filetype-pdf.png": "f22db976997b38ca728600a20cd696b80914dda8",
+    "/b4e/assets/images/ic24-filetype-rec.png": "37e5eb06495bbb8901c71b5de05cb1d38c918015",
+    "/b4e/assets/images/ic24-filetype-vid.png": "a34e5e36ffd1e120fda85d73102edba070d7ccfe",
     "/b4e/assets/images/ic24-loadbay-active@2x.png": "55fc92d4dd327194f9e2a7c21766e6b2ff10eba3",
     "/b4e/assets/images/ic24-loadbay@2x.png": "81f9f8ed055b2967ab2c7dfc49293051d7aa9a0f",
     "/b4e/assets/images/ic24-manage-active@2x.png": "67a7c6f7674c85b2602cc8e706a72f1fabc1389c",
@@ -228,15 +242,15 @@
     "/b4e/assets/images/vault-original.psd": "3d7b6a4163a0cc093b25ad851549697e9396cb37",
     "/b4e/assets/images/visibility.svg": "4d5fdf55ff3577361e83aee3bde74ddb0e91bdd2",
     "/b4e/favicon.ico": "bfa8c53582239e356930d6ab14a9d350fa656f56",
-    "/b4e/index.html": "8b4e9a27fe4d186c65d2442fc55da805ae757da9",
-    "/b4e/main-es2015.cccea4217fd2bb2e4146.js": "40e9e0365d23e47d5c2beb1c603867d3be35b978",
-    "/b4e/main-es5.cccea4217fd2bb2e4146.js": "3c1cbd27eace955ef0ac04cb33105b5bd4769078",
+    "/b4e/index.html": "0692290db2ea22ea6d6291e79acdc2d72378d7a9",
+    "/b4e/main-es2015.7f1b55313b110e890c13.js": "6be9f3f393414a46c1bb9e1642ebe957800edf93",
+    "/b4e/main-es5.7f1b55313b110e890c13.js": "c14316eaf03cd7ad20ad7481977a3455e3c64fad",
     "/b4e/manifest.webmanifest": "3c7a0d494b067195ee4337196569867747541bab",
     "/b4e/polyfills-es2015.d8a44a7976cb9f02e87b.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/b4e/polyfills-es5.ab6d4370d6e1c9408f05.js": "e5472003c8575a8fca7583648df3905038faeb18",
     "/b4e/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/b4e/runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/b4e/styles.1025b22535210b820e04.css": "32bf44e0e0448a5acd0adf9e1767213626f02993",
+    "/b4e/styles.e94573069ca84830d58d.css": "5ceca9f69d129893479d0c8326eaae42f9417ab3",
     "/b4e/vault-bgd.b274eee6cc51889e3e95.jpg": "44debb135d2c762a552900ecb8888b312a3896f3"
   },
   "navigationUrls": [
